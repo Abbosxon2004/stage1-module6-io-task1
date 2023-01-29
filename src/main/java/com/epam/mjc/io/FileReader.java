@@ -20,9 +20,9 @@ public class FileReader {
                 if (str.contains("Email")) profile.setEmail(str.substring(index+2));
                 if (str.contains("Phone")) profile.setPhone(Long.valueOf(str.substring(index+2)));
             }
-            return profile;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        return new Profile(profile.getName(), profile.getAge(), profile.getEmail(), profile.getPhone());
     }
 }
