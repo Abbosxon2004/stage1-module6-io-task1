@@ -4,7 +4,7 @@ import java.io.*;
 
 
 public class FileReader {
-    public static Profile getDataFromFile(File file) {
+    public Profile getDataFromFile(File file) {
         Profile profile = new Profile();
         try (BufferedReader reader = new BufferedReader(new java.io.FileReader(file))) {
             String str;
